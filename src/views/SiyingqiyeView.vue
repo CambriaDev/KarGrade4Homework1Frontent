@@ -1,5 +1,5 @@
 <template>
-  <div class="jingjixiangcun">
+  <div class="siyingqiye">
     <div id="main" style="width: 75vw; height: 60vh; margin: 5vh 10vw 5vh 10vw"></div>
   </div>
 </template>
@@ -38,22 +38,48 @@ export default {
         ],
         series: [
           {
-            name: '私营企业乡村就业人员',
+            name: '私营企业户数',
             type: 'bar',
-            stack: 'Ad',
             emphasis: {
               focus: 'series'
             },
             data: [320, 332, 301, 334, 390, 330, 320]
           },
           {
-            name: '个体乡村就业人员',
+            name: '城镇私营企业就业人数',
             type: 'bar',
             stack: 'Ad',
             emphasis: {
               focus: 'series'
             },
-            data: [120, 132, 101, 134, 90, 230, 210]
+            data: []
+          },
+          {
+            name: '城镇私营企业投资者就业人数',
+            type: 'bar',
+            stack: 'Adc',
+            emphasis: {
+              focus: 'series'
+            },
+            data: []
+          },
+          {
+            name: '乡村私营企业就业人数',
+            type: 'bar',
+            stack: 'Ad',
+            emphasis: {
+              focus: 'series'
+            },
+            data: []
+          },
+          {
+            name: '乡村私营企业投资者就业人数',
+            type: 'bar',
+            stack: 'Adc',
+            emphasis: {
+              focus: 'series'
+            },
+            data: []
           }
         ]
       }
@@ -66,11 +92,14 @@ export default {
 
   methods: {
     async fetchData() {
-      await getCommonData('jingjixiangcun').then((res) => {
+      await getCommonData('siyingqiye').then((res) => {
         for (let i = 0; i < res.length; i++) {
           this.option.xAxis[0].data[i] = res[res.length - 1 - i].c1
-          this.option.series[0].data[i] = res[res.length - 1 - i].c3
-          this.option.series[1].data[i] = res[res.length - 1 - i].c4
+          this.option.series[0].data[i] = res[res.length - 1 - i].c2
+          this.option.series[1].data[i] = res[res.length - 1 - i].c5
+          this.option.series[2].data[i] = res[res.length - 1 - i].c6
+          this.option.series[3].data[i] = res[res.length - 1 - i].c7
+          this.option.series[4].data[i] = res[res.length - 1 - i].c8
         }
         console.log('ok')
       })

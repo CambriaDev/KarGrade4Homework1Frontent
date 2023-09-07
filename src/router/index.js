@@ -22,41 +22,41 @@ const router = createRouter({
       name: 'chengxiang',
       component: () => import('../views/ChengxiangView.vue')
     },
-    // {
-    //   path: '/hangyechengzhen',
-    //   name: 'hangyechengzhen',
-    //   component: () => import('../views/HangyechengzhenView.vue')
-    // },
-    // {
-    //   path: '/hangyeguoyou',
-    //   name: 'hangyeguoyou',
-    //   component: () => import('../views/HangyeguoyouView.vue')
-    // },
-    // {
-    //   path: '/jingjichengzhen',
-    //   name: 'jingjichengzhen',
-    //   component: () => import('../views/JingjichengzhenView.vue')
-    // },
-    // {
-    //   path: '/jingjixiangcun',
-    //   name: 'jingjixiangcun',
-    //   component: () => import('../views/JingjixiangcunView.vue')
-    // },
-    // {
-    //   path: '/laodongli',
-    //   name: 'laodongli',
-    //   component: () => import('../views/LaodongliView.vue')
-    // },
-    // {
-    //   path: '/sancichanye',
-    //   name: 'sancichanye',
-    //   component: () => import('../views/SancichanyeView.vue')
-    // },
-    // {
-    //   path: '/siyingqiye',
-    //   name: 'siyingqiye',
-    //   component: () => import('../views/SiyingqiyeView.vue')
-    // }
+    {
+      path: '/hangyechengzhen',
+      name: 'hangyechengzhen',
+      component: () => import('../views/HangyechengzhenView.vue')
+    },
+    {
+      path: '/hangyeguoyou',
+      name: 'hangyeguoyou',
+      component: () => import('../views/HangyeguoyouView.vue')
+    },
+    {
+      path: '/jingjichengzhen',
+      name: 'jingjichengzhen',
+      component: () => import('../views/JingjichengzhenView.vue')
+    },
+    {
+      path: '/jingjixiangcun',
+      name: 'jingjixiangcun',
+      component: () => import('../views/JingjixiangcunView.vue')
+    },
+    {
+      path: '/laodongli',
+      name: 'laodongli',
+      component: () => import('../views/LaodongliView.vue')
+    },
+    {
+      path: '/sancichanye',
+      name: 'sancichanye',
+      component: () => import('../views/SancichanyeView.vue')
+    },
+    {
+      path: '/siyingqiye',
+      name: 'siyingqiye',
+      component: () => import('../views/SiyingqiyeView.vue')
+    }
   ]
 })
 

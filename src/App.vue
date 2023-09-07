@@ -5,29 +5,27 @@ import HelloWorld from './components/HelloWorld.vue'
 
 <template>
   <div>
-  <header>
-    <!-- <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" /> -->
+    <header>
+      <!-- <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" /> -->
 
-    <div class="wrapper">
-      <!-- <HelloWorld msg="这是赵芃瑞的作业" /> -->
+      <div class="wrapper">
+        <!-- <HelloWorld msg="这是赵芃瑞的作业" /> -->
 
-      <nav v-for="item in routerItem">
-        <!-- <RouterLink to="/">Home</RouterLink>
+        <nav v-for="item in routerItem">
+          <!-- <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/about">About</RouterLink> -->
-        
-        <RouterLink :to="item.path">{{ item.name }}</RouterLink>
-      </nav>
-    </div>
-  </header>
+
+          <RouterLink :to="item.path">{{ item.name }}</RouterLink>
+        </nav>
+      </div>
+    </header>
   </div>
   <div>
-  <RouterView />
+    <RouterView />
   </div>
-
 </template>
 
 <script>
-
 export default {
   data() {
     return {
@@ -38,41 +36,39 @@ export default {
         },
         {
           name: '行业-城镇',
-          path: 'hangyechengzhen'
+          path: '/hangyechengzhen'
         },
         {
           name: '行业-国有',
-          path: 'hangyeguoyou'
+          path: '/hangyeguoyou'
         },
         {
           name: '经济-城镇',
-          path: 'jingjichengzhen'
+          path: '/jingjichengzhen'
         },
         {
           name: '经济-乡村',
-          path: 'jingjixiangcun'
+          path: '/jingjixiangcun'
         },
         {
           name: '劳动力',
-          path: 'laodongli'
+          path: '/laodongli'
         },
         {
           name: '三次产业',
-          path: 'sancichanye'
+          path: '/sancichanye'
         },
         {
           name: '私营企业',
-          path: 'siyingqiye'
+          path: '/siyingqiye'
         }
       ]
     }
   }
 }
-
 </script>
 
 <style scoped>
-
 nav {
   width: 100%;
   font-size: 12px;
@@ -100,14 +96,13 @@ nav a:first-of-type {
 }
 
 nav {
-    text-align: left;
-    margin-left: -1rem;
-    font-size: 1rem;
+  text-align: left;
+  margin-left: -1rem;
+  font-size: 1rem;
 
-    padding: 1rem 0;
-    margin-top: 1rem;
-  }
-
+  padding: 1rem 0;
+  margin-top: 1rem;
+}
 
 /* header {
   line-height: 1.5;
